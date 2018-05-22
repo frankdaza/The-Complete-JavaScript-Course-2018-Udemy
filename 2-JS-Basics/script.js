@@ -55,7 +55,7 @@ ageMark *= 2;
 console.log("ageJohn: " + ageJohn);
 console.log("ageMark: " + ageMark);
 
-*/
+
 
 // Lecture: if/else statements
 var name = "Frank Edward";
@@ -81,9 +81,51 @@ if (23 === "23") {
     console.log("somthing to print...");
 }
 
+*/
 
 
+// Lecture: Boolean Logic and Switch
+var age = 100;
 
+if (age < 20) {
+    console.log("John is a teenager!");
+} else if (age >= 20 && age <= 30) {
+    console.log("John is a young man!");
+} else { 
+    console.log("John is a man");
+}
+
+var job = prompt("What does John do?");
+
+switch (job) {
+    case "teacher":
+      console.log("John teaches kids.");
+      break;
+    case "driver":
+      console.log("John drives a cab.");
+      break;
+    case "cop":
+      console.log("John helps fight crime.");
+      break;
+    default:
+      console.log("John does something else.");
+}
+
+// var number = 2;
+
+// switch (number) {
+//     case "1":
+//       console.log("John teaches kids.");
+//       break;
+//     case "2":
+//       console.log("John drives a cab.");
+//       break;
+//     case "12":
+//       console.log("John helps fight crime.");
+//       break;
+//     default:
+//       console.log("John does something else.");
+// }
 
 
 
