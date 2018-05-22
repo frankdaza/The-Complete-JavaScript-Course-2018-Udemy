@@ -35,7 +35,7 @@ console.log(name + " is a " + age + " years old " + job + " Is he married? " + i
 var lastName = prompt("What is the last name?");
 console.log("The lastname is: " + lastName);
 alert("The lastname is: " + lastName);
-*/
+
 
 
 // Lecture: operators
@@ -55,11 +55,31 @@ ageMark *= 2;
 console.log("ageJohn: " + ageJohn);
 console.log("ageMark: " + ageMark);
 
+*/
 
+// Lecture: if/else statements
+var name = "Frank Edward";
+var age = 28;
+var isMarried = "no";
 
+if (isMarried === "no") {
+    console.log(name + " is married!");
+} else {
+    console.log(name + " will hopefully marry soon :)!");
+}
 
+isMarried = false;
 
+if (isMarried) {
+    console.log("YES!");
+} else {
+    console.log("NO!");
+}
 
+if (23 === "23") {
+// if (23 == "23") {
+    console.log("somthing to print...");
+}
 
 
 
