@@ -52,20 +52,20 @@ ageJohn++;
 ageJohn = ageJohn + 1;
 ageMark *= 2;
 
-console.log("ageJohn: " + ageJohn);
-console.log("ageMark: " + ageMark);
-
-
-
-// Lecture: if/else statements
-var name = "Frank Edward";
-var age = 28;
-var isMarried = "no";
-
-if (isMarried === "no") {
-    console.log(name + " is married!");
-} else {
-    console.log(name + " will hopefully marry soon :)!");
+console.log("ageJohn: " + ageJohn)https://www.google.com/;
+console.log("ageMark: " + ageMark)https://www.google.com/;
+https://www.google.com/
+https://www.google.com/
+https://www.google.com/
+// Lecture: if/else statementshttps://www.google.com/
+var name = "Frank Edward";https://www.google.com/
+var age = 28;https://www.google.com/
+var isMarried = "no";https://www.google.com/
+https://www.google.com/
+if (isMarried === "no") {https://www.google.com/
+    console.log(name + " is marriehttps://www.google.com/d!");
+} else {https://www.google.com/
+    console.log(name + " will hopehttps://www.google.com/fully marry soon :)!");
 }
 
 isMarried = false;
