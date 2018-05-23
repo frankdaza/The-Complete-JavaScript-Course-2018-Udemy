@@ -172,7 +172,7 @@ if (x === 5) {
     // do something
 }
 
-*/
+
 
 // LECTURE: ARRAYS
 var names = ["Frank", "Vanessa", "John"];
@@ -207,7 +207,30 @@ if (frank.indexOf("professor") === -1) {
     console.log("Frank is a professor");
 }
 
+*/
 
 
+// LECTURE: OBJECTS
+var frank = {
+    name: "Frank Edward",
+    lastName: "Daza González",
+    yearOfBirth: 1989,
+    job: "Systems Engineer",
+    isMarried: false
+};
 
+console.log(frank.name);
+console.log(frank["lastName"]);
+console.log(frank);
 
+frank.name = "Chango";
+frank.lastName = "Man";
+console.log(frank);
+
+var jane = new Object();
+jane.name = "Jane";
+jane.lastName = "Jackson";
+jane.yearOfBirth = 1996;
+jane["job"] = "Engineer";
+jane["isMarried"] = true;
+console.log(jane);
