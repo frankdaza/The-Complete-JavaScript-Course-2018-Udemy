@@ -127,7 +127,7 @@ switch (job) {
 //       console.log("John does something else.");
 // }
 
-*/
+
 
 // LECTURE: FUNCTIONS
 function calculateAge(yearOfBirth) {
@@ -151,8 +151,26 @@ function yearsUntilRetirement(name, yearOfBirth) {
 yearsUntilRetirement("Frank Daza", 1989);
 yearsUntilRetirement("Mary Morgan", 1949);
 
+*/
 
 
+// LECTURE: STATEMENTS AND EXPRESSIONS
+function someFun(par) {
+    // code
+}
+
+var someFun = function(par) {
+    // code
+}
+
+// Expressions
+3 + 4;
+var x = 3;
+
+// Statements
+if (x === 5) {
+    // do something
+}
 
 
 
