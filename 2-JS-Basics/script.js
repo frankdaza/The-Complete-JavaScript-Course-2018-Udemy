@@ -81,7 +81,7 @@ if (23 === "23") {
     console.log("somthing to print...");
 }
 
-*/
+
 
 
 // Lecture: Boolean Logic and Switch
@@ -127,11 +127,29 @@ switch (job) {
 //       console.log("John does something else.");
 // }
 
+*/
 
+// LECTURE: FUNCTIONS
+function calculateAge(yearOfBirth) {
+    return 2018 - yearOfBirth;
+}
 
+var ageFrank = calculateAge(1989);
+// console.log(ageFrank);
 
+function yearsUntilRetirement(name, yearOfBirth) {
+    var year = calculateAge(yearOfBirth);
+    var retirement = 65 - year;
 
+    if (retirement >= 0) {
+        console.log(name + " retires in " + retirement + " years.");
+    } else {
+        console.log(name + " is already retired.");
+    }
+}
 
+yearsUntilRetirement("Frank Daza", 1989);
+yearsUntilRetirement("Mary Morgan", 1949);
 
 
 
