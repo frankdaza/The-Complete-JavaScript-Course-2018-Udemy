@@ -207,7 +207,7 @@ if (frank.indexOf("professor") === -1) {
     console.log("Frank is a professor");
 }
 
-*/
+
 
 
 // LECTURE: OBJECTS
@@ -234,3 +234,44 @@ jane.yearOfBirth = 1996;
 jane["job"] = "Engineer";
 jane["isMarried"] = true;
 console.log(jane);
+
+*/
+
+
+// LECTURE: Objects and Methods
+var frank = {
+    name: "Frank Edward",
+    lastName: "Daza González",
+    yearOfBirth: 1989,
+    job: "Systems Engineer",
+    isMarried: false,
+    family: ["Obed", "Martha"],
+    calculateAge: function() {
+        return 2018 - this.yearOfBirth;
+    }
+};
+
+console.log(frank);
+console.log(frank.calculateAge());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
