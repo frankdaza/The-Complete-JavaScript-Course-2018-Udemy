@@ -151,7 +151,7 @@ function yearsUntilRetirement(name, yearOfBirth) {
 yearsUntilRetirement("Frank Daza", 1989);
 yearsUntilRetirement("Mary Morgan", 1949);
 
-*/
+
 
 
 // LECTURE: STATEMENTS AND EXPRESSIONS
@@ -172,15 +172,40 @@ if (x === 5) {
     // do something
 }
 
+*/
 
+// LECTURE: ARRAYS
+var names = ["Frank", "Vanessa", "John"];
+var ages = new Array(28, 24, 26);
 
+console.log(names);
+console.log(names[0]);
+console.log(ages);
+console.log(ages[1]);
 
+names[0] = "Ben";
+console.log(names);
 
+var frank = ["Frank", "Edward", 28, "professor", false];
+console.log(frank);
 
+// Add an element at the end of the array.
+frank.push("González");
+// Add an element at the beginning of the array
+frank.unshift("Engineer");
+console.log(frank);
+// Remove the last element from the array and returns it.
+frank.pop();
+console.log(frank);
+// Remove the first element from the array and returns it.
+frank.shift();
+console.log(frank);
 
-
-
-
+if (frank.indexOf("professor") === -1) {
+    console.log("Frank is not a professor");
+} else {
+    console.log("Frank is a professor");
+}
 
 
 
