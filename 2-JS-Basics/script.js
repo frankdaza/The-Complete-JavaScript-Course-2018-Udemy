@@ -235,7 +235,7 @@ jane["job"] = "Engineer";
 jane["isMarried"] = true;
 console.log(jane);
 
-*/
+
 
 
 // LECTURE: Objects and Methods
@@ -254,15 +254,48 @@ var frank = {
 console.log(frank);
 console.log(frank.calculateAge());
 
+*/
+
+// LECTURE: Loops
+
+// for loops
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+for (var i = 9; i >= 0; i--) {
+    console.log(i);
+}
+
+var names = ["John", "Jane", "Frank", "Vanessa", "Mary", "Mark", "Bob"];
+
+for (var i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
+
+// while loops
+var i = 0;
+
+while (i < names.length) {
+    console.log("While loop: " + names[i]);
+    i++;
+}
 
 
 
+for (var i = 1; i <= 5; i++) {
+    console.log(i);
+    if (i === 3) {
+        break;
+    }
+}
 
-
-
-
-
-
+for (var i = 1; i <= 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
 
 
 
