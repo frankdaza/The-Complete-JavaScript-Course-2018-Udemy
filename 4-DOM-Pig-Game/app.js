@@ -33,6 +33,7 @@ current1.textContent = "0"
 var panel0 = document.getElementById("panel0");
 var panel1 = document.getElementById("panel1");
 
+// Manage the die and current score
 document.getElementById("btnRoll").addEventListener("click", function() {
     // 1. Random number
     var dice = Math.floor(Math.random() * 6) + 1;
@@ -53,12 +54,45 @@ document.getElementById("btnRoll").addEventListener("click", function() {
         }
     } else {
         // Next player
-        activePlayer = activePlayer === 0 ? 1 : 0;
-        roundScore = 0;
-        current0.textContent = "0";
-        current1.textContent = "0";
-        diceDOM.style.display = "none";
-        panel0.classList.toggle("active")
-        panel1.classList.toggle("active")
+        nextPlayer();
     }
 });
+
+// Manage the hold function
+document.getElementById("btnHold").addEventListener("click", function() {
+    // Add current score to global score
+    scores[activePlayer] += roundScore;
+
+    // Update the UI
+    if (activePlayer === 0)
+        score0.textContent = scores[activePlayer];
+    else
+        score1.textContent = scores[activePlayer];
+
+    // Check if player won the game
+    if (scores[activePlayer] >= 10) {
+      document.querySelector("#name-" + activePlayer).textContent = "Winner!";
+      diceDOM.style.display = "none";
+
+      if (activePlayer === 0) {
+        panel0.classList.add("winner");
+        panel0.classList.remove("active");
+      } else {
+        panel1.classList.add("winner");
+        panel1.classList.remove("active");
+      }
+
+    } else {
+      nextPlayer();
+    }
+});
+
+function nextPlayer() {
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    roundScore = 0;
+    current0.textContent = "0";
+    current1.textContent = "0";
+    diceDOM.style.display = "none";
+    panel0.classList.toggle("active");
+    panel1.classList.toggle("active");
+};
