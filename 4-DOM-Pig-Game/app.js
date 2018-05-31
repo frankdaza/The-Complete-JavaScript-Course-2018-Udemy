@@ -10,12 +10,13 @@ GAME RULES:
 */
 
 var scores, roundScore, activePlayer, diceDOM, score0, 
-  score1, current0, current1, panel0, panel1;
+    score1, current0, current1, panel0, panel1, btnRoll
+    btnHold;
 
 init();
 
 // Manage the die and current score
-document.getElementById("btnRoll").addEventListener("click", function() {
+btnRoll.addEventListener("click", function() {
     // 1. Random number
     var dice = Math.floor(Math.random() * 6) + 1;
 
@@ -40,7 +41,7 @@ document.getElementById("btnRoll").addEventListener("click", function() {
 });
 
 // Manage the hold function
-document.getElementById("btnHold").addEventListener("click", function() {
+btnHold.addEventListener("click", function() {
     // Add current score to global score
     scores[activePlayer] += roundScore;
 
@@ -54,6 +55,9 @@ document.getElementById("btnHold").addEventListener("click", function() {
     if (scores[activePlayer] >= 10) {
       document.querySelector("#name-" + activePlayer).textContent = "Winner!";
       diceDOM.style.display = "none";
+      btnRoll.disabled = true;
+      btnHold.disabled = true;
+
 
       if (activePlayer === 0) {
         panel0.classList.add("winner");
@@ -85,6 +89,12 @@ function init() {
   scores = [0, 0];
   roundScore = 0;
   activePlayer = 0;
+
+  btnRoll = document.getElementById("btnRoll");
+  btnRoll.disabled = false;
+
+  btnHold = document.getElementById("btnHold");
+  btnHold.disabled = false;
 
   diceDOM = document.getElementById("diceIMG");
   diceDOM.style.display = "none";
