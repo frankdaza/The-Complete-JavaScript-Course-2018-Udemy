@@ -9,29 +9,10 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer;
+var scores, roundScore, activePlayer, diceDOM, score0, 
+  score1, current0, current1, panel0, panel1;
 
-scores = [0, 0];
-roundScore = 0;
-activePlayer = 0;
-
-var diceDOM = document.getElementById("diceIMG");
-diceDOM.style.display = "none";
-
-var score0 = document.getElementById("score-0");
-score0.textContent = "0"
-
-var score1 = document.getElementById("score-1");
-score1.textContent = "0"
-
-var current0 = document.getElementById("current-0");
-current0.textContent = "0"
-
-var current1 = document.getElementById("current-1");
-current1.textContent = "0"
-
-var panel0 = document.getElementById("panel0");
-var panel1 = document.getElementById("panel1");
+init();
 
 // Manage the die and current score
 document.getElementById("btnRoll").addEventListener("click", function() {
@@ -95,4 +76,40 @@ function nextPlayer() {
     diceDOM.style.display = "none";
     panel0.classList.toggle("active");
     panel1.classList.toggle("active");
+};
+
+// Manage new game
+document.getElementById("btnNew").addEventListener("click", init);
+
+function init() {
+  scores = [0, 0];
+  roundScore = 0;
+  activePlayer = 0;
+
+  diceDOM = document.getElementById("diceIMG");
+  diceDOM.style.display = "none";
+
+  score0 = document.getElementById("score-0");
+  score0.textContent = "0"
+
+  score1 = document.getElementById("score-1");
+  score1.textContent = "0"
+
+  current0 = document.getElementById("current-0");
+  current0.textContent = "0"
+
+  current1 = document.getElementById("current-1");
+  current1.textContent = "0"
+
+  panel0 = document.getElementById("panel0");
+  panel0.classList.remove("winner");
+  panel0.classList.remove("winner");
+  panel0.classList.add("active");
+
+  panel1 = document.getElementById("panel1");
+  panel1.classList.remove("winner");
+  panel1.classList.remove("active");
+
+  document.getElementById("name-0").textContent = "Player 1";
+  document.getElementById("name-1").textContent = "Player 2";
 };
