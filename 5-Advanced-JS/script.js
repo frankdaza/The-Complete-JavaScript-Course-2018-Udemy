@@ -102,7 +102,7 @@ console.log(a);
 
 var b = arrCalculate(arrAges, fullAges);
 console.log(b);
-*/
+
 
 // Lecture: Functions returning functions
 function interviewQuestion(job) {
@@ -131,9 +131,22 @@ var question = interviewQuestion("engineer");
 question("Frank Daza");
 
 interviewQuestion("teacher")("Mark");
+*/
 
+// Lecture: IIFE
+(
+  function () {
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+  }
+)();
 
-
+(
+  function (goodLuck) {
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodLuck);
+  }
+)(5);
 
 
 
