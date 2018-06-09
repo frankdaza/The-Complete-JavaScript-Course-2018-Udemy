@@ -147,7 +147,7 @@ interviewQuestion("teacher")("Mark");
     console.log(score >= 5 - goodLuck);
   }
 )(5);
-*/
+
 
 // Lecture: Closures
 function retirement(retirementAge) {
@@ -163,12 +163,31 @@ var retirementUS = retirement(66);
 retirementUS(1990);
 
 retirement(56)(1980);
+*/
 
+// Lecture: Bind, call and apply
+var frank = {
+  name: "Frank Daza",
+  age: 28, 
+  job: "Systems engineer",
+  presentation: function name(style, timeOfDay) {
+    if (style === "formal") {
+      console.log("Good " + timeOfDay + " Ladies and Gentlemen! I\'m " + this.name + " I\'m " + this.job + " and I\'m " + this.age + " years old.");
+    } else if (style === "friendly") {
+      console.log("Hey! What's up? I'm " + this.name + ", I'm a " + this.job + " and I'm " + this.age + " years old. Have a nice " + this.timeOfDay + ".");
+    }
+  }
+};
 
+var vanessa = {
+  name: "Vanessa Porras",
+  age: 24,
+  job: "Teacher"
+};
 
+frank.presentation("formal", "morning");
+frank.presentation.call(vanessa, "friendly", "morning");
 
-
-
-
-
+var johnFriendly = frank.presentation.bind(frank, "friendly");
+johnFriendly("morning");
 
