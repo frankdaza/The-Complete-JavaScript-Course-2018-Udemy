@@ -38,7 +38,7 @@ var frank = Object.create(personProto);
 frank.name = "Frank Daza"
 frank.job = "Systems engineer"
 frank.yearOfBirth = 1989;
- */
+
 
 // Primitives vs Objects
 
@@ -74,6 +74,43 @@ function change(a, b) {
 
 console.log("age = " + age);
 console.log("b.city = " + b.city);
+ */
+
+// Lecture: Passing functions as arguments
+var arrAges = [1990, 1946, 2008, 1997];
+
+function arrCalculate(array, fn) {
+  var arrTmp = [];
+
+ for (let i = 0; i < array.length; i++) {
+   arrTmp.push(fn(array[i]));
+ }
+
+ return arrTmp;
+};
+
+function ageCalculate(year) {
+  return 2018 - year;
+};
+
+function fullAges(year) {
+  return ageCalculate(year) >= 18;
+}
+
+var a = arrCalculate(arrAges, ageCalculate);
+console.log(a);
+
+var b = arrCalculate(arrAges, fullAges);
+console.log(b);
+
+
+
+
+
+
+
+
+
 
 
 
