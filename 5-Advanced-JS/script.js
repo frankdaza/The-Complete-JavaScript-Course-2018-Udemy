@@ -1,4 +1,5 @@
 // Function constructor
+/**
 var frank = {
     name: "Frank Edward",
     yearOfBirth: 1989,
@@ -24,3 +25,16 @@ Person.prototype.hello = function() {
 
 var john = new Person("John Wick", 1978, "Vigilante");
 var mark = new Person("Mark Wilson", 1960, "Teacher");
+ */
+
+// Object.create
+var personProto = {
+  calculateAge: function() {
+  console.log(2018 - this.yearOfBirth);
+  }
+};
+
+var frank = Object.create(personProto);
+frank.name = "Frank Daza"
+frank.job = "Systems engineer"
+frank.yearOfBirth = 1989;
