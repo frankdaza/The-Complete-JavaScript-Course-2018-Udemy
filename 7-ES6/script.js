@@ -11,7 +11,7 @@ name5 = "Johan Gutierrez";
 let name6 = "Frank Daza";
 name6 = "Frank Gonzalez";
 
-*/
+
 
 function driversLicense5(passedTest) {
     
@@ -52,3 +52,17 @@ for (let i = 0; i < 6; i++) {
 }
 
 console.log(i);
+
+*/
+
+// Lectura: Blocks and IIFEs
+
+// ES6 IIFE
+{
+    let a = 1;
+    const b = 3;
+    var c = 12;
+}
+// console.log(a + b);
+console.log(c);
+
