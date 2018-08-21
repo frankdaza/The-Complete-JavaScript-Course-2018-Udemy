@@ -66,7 +66,7 @@ console.log(i);
 // console.log(a + b);
 console.log(c);
 
-*/
+
 
 // Lecture: Strings
 
@@ -92,3 +92,31 @@ console.log(name.startsWith("á"));
 console.log(name.endsWith("z"));
 console.log(name.includes(" "));
 console.log(name.repeat(10));
+
+*/
+
+// Lecture: Arrow functions
+
+const years = [1989, 1990, 1976, 1960, 2000];
+
+// ES5
+var ages5 = years.map(function(el) {
+    return 2018 - el;
+});
+
+console.log(ages5);
+
+// ES6
+let ages6 = years.map(el => 2018 - el);
+console.log(ages6);
+
+ages6 = years.map((el, index) => `Element ${index + 1}: ${2018 - el}.`);
+console.log(ages6);
+
+ages6 = years.map((el, index) => {
+    const now = new Date().getFullYear();
+    const age = now - el;
+
+    return `Element ${index + 1}: ${age}.`;
+});
+console.log(ages6);
