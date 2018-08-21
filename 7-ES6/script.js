@@ -93,7 +93,7 @@ console.log(name.endsWith("z"));
 console.log(name.includes(" "));
 console.log(name.repeat(10));
 
-*/
+
 
 // Lecture: Arrow functions
 
@@ -120,3 +120,20 @@ ages6 = years.map((el, index) => {
     return `Element ${index + 1}: ${age}.`;
 });
 console.log(ages6);
+
+*/
+
+// Lecture: Destructuring
+
+// ES5
+var frank = ["Frank Edward", 28];
+var name5 = frank[0];
+var age5 = frank[1];
+console.log(name5);
+console.log(age5);
+
+// ES6
+var [name6, age6] = ["Frank Daza", 30];
+console.log(name6);
+console.log(age6);
+
