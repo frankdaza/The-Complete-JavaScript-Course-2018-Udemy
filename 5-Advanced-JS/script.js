@@ -163,7 +163,7 @@ var retirementUS = retirement(66);
 retirementUS(1990);
 
 retirement(56)(1980);
-*/
+
 
 // Lecture: Bind, call and apply
 var frank = {
@@ -190,4 +190,79 @@ frank.presentation.call(vanessa, "friendly", "morning");
 
 var johnFriendly = frank.presentation.bind(frank, "friendly");
 johnFriendly("morning");
+
+*/
+
+
+// Coding challenge 7
+
+(function() {
+  var Question = function(question, answers, correct) {
+    this.question = question;
+    this.answers = answers;
+    this.correct = correct;
+
+    this.displayQuestion = function() {
+      console.log(this.question);
+
+      for (var i = 0; i < this.answers.length; i++) {
+        console.log(i + ": " + this.answers[i]);
+      }
+    };
+
+    this.checkAnswer = function(answer) {
+      if (answer === this.correct) {
+        console.log("Correct answer!");
+      } else {
+        console.log("Try again!");
+      }
+    };
+
+  };
+
+  var q1 = new Question(
+    "Is Javascript the coolest programming language in the world?",
+    ["yes", "no"],
+    1
+  );
+
+  var q2 = new Question(
+    "What is the name of this course\'s teacher?",
+    ["John", "Frank", "Vanessa"],
+    1
+  );
+
+  var q3 = new Question(
+    "What is the best guitarrist in the world?",
+    ["Joe Satriani", "Michael Angelo", "Steve Vai", "Jason Becker", "John Petrucci", "Yngwie Malmsteen", "None of them"],
+    6
+  );
+
+  var q4 = new Question(
+    "What does best describe coding?",
+    ["Hard", "Boring", "Fun"],
+    2
+  );
+
+  var questions = [q1, q2, q3, q4];
+  var numberQuestion = Math.floor(Math.random() * questions.length);
+
+  questions[numberQuestion].displayQuestion();
+
+  var answer = parseInt(prompt("Please select the correct answer:"));
+
+  questions[numberQuestion].checkAnswer(answer);
+
+})();
+
+
+
+
+
+
+
+
+
+
+
 
