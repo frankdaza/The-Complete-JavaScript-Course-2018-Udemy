@@ -53,9 +53,9 @@ for (let i = 0; i < 6; i++) {
 
 console.log(i);
 
-*/
 
-// Lectura: Blocks and IIFEs
+
+// Lecture: Blocks and IIFEs
 
 // ES6 IIFE
 {
@@ -66,3 +66,29 @@ console.log(i);
 // console.log(a + b);
 console.log(c);
 
+*/
+
+// Lecture: Strings
+
+let firstName = "Frank Edward";
+let lastName = "Daza Gonzalez";
+const yearOfBirth = 1989;
+
+function calculateAge(year) {
+    return 2018 - year;
+}
+
+// ES5
+console.log("This is " + firstName + " " + lastName 
+    + ". He was born in " + yearOfBirth + ". Today, he is "
+    + calculateAge(yearOfBirth) + " years old. ES5.");
+
+// ES6
+console.log(`This is ${firstName} ${lastName}. He was born in ${yearOfBirth}.
+    Today, he is ${calculateAge(yearOfBirth)} years old. ES6.`);
+
+const name = "áFrank Edward Daza González";
+console.log(name.startsWith("á"));
+console.log(name.endsWith("z"));
+console.log(name.includes(" "));
+console.log(name.repeat(10));
