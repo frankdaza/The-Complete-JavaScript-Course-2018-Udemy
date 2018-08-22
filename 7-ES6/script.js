@@ -137,7 +137,7 @@ var [name6, age6] = ["Frank Daza", 30];
 console.log(name6);
 console.log(age6);
 
-*/
+
 
 
 // Lecture: Arrays in ES6 / ES2015
@@ -157,3 +157,28 @@ cur.style.backgroundColor = "red");
 var ages = [16, 34, 12, 14, 19, 25];
 console.log(ages.findIndex(e => e >= 18));
 console.log(ages.find(e => e >= 18));
+
+*/
+
+// Lecture: The spread operator
+
+function addFourAges(a, b, c, d) {
+    return a + b + c + d;
+}
+
+const ages = [12, 43, 25, 42];
+
+const sum = addFourAges(...ages);
+console.log(sum);
+
+const familyDaza = ["Obed", "Martha", "Frank"];
+const familyPorras = ["Adiela", "Vanessa", "Gabriela"];
+const bigFamily = [...familyDaza, ...familyPorras];
+console.log(bigFamily);
+
+const h = document.querySelector("h1");
+const boxes = document.querySelectorAll(".box");
+const all = [h, ...boxes];
+Array.from(boxes).forEach(box =>
+    box.style.color = "purple"
+);
