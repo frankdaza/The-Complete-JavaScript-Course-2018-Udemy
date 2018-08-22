@@ -121,7 +121,7 @@ ages6 = years.map((el, index) => {
 });
 console.log(ages6);
 
-*/
+
 
 // Lecture: Destructuring
 
@@ -137,3 +137,23 @@ var [name6, age6] = ["Frank Daza", 30];
 console.log(name6);
 console.log(age6);
 
+*/
+
+
+// Lecture: Arrays in ES6 / ES2015
+
+const boxes = document.querySelectorAll(".box");
+
+// ES5
+// var boxesArr5 = Array.prototype.slice.call(boxes);
+// boxesArr5.forEach(function(cur) {
+//     cur.style.backgroundColor = "yellow";
+// });
+
+// ES6
+Array.from(boxes).forEach(cur => 
+cur.style.backgroundColor = "red");
+
+var ages = [16, 34, 12, 14, 19, 25];
+console.log(ages.findIndex(e => e >= 18));
+console.log(ages.find(e => e >= 18));
