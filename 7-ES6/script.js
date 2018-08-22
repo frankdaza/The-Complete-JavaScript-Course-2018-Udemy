@@ -183,7 +183,7 @@ Array.from(boxes).forEach(box =>
     box.style.color = "purple"
 );
 
-*/
+
 
 // Lecture: Rest parameters
 
@@ -194,3 +194,17 @@ function isFullAge6(...years) {
 }
 
 isFullAge6(990, 2000, 1965);
+
+*/
+
+// Lecture: Default parameters
+
+const Person = function(firstName, yearOfBirth = 0, lastName, nationality = "Colombiano") {
+    this.firstName = firstName;
+    this.yearOfBirth = yearOfBirth;
+    this.lastName = lastName;
+    this.nationality = nationality;
+}
+
+let frank = new Person("Frank");
+console.log(frank);
