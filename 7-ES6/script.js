@@ -267,5 +267,25 @@ class Person {
     }
 }
 
-const frank = new Person("Frank Edward Daza González", 1989, "Systems Engineer");
-Person.greeting();
+// const frank = new Person("Frank Edward Daza González", 1989, "Systems Engineer");
+// Person.greeting();
+
+class Athlete extends Person {
+
+    constructor(name, yearOfBirth, job, 
+        olympicGames, medals) {
+            super(name, yearOfBirth, job);
+            this.olympicGames = olympicGames;
+            this.medals = medals;
+    }
+
+    wonMedal() {
+        this.medals++;
+        console.log(this.medals);
+    }
+
+}
+
+const johnAthlete = new Athlete("John Athlete", 1990, "swimmer", 3, 10)
+johnAthlete.wonMedal();
+johnAthlete.calculateAge();
