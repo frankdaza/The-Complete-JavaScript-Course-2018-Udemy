@@ -209,7 +209,7 @@ const Person = function(firstName, yearOfBirth = 0, lastName, nationality = "Col
 let frank = new Person("Frank");
 console.log(frank);
 
-*/
+
 
 // Lecture: Maps
 
@@ -243,3 +243,29 @@ for (const [key, value] of question.entries()) {
         console.log(`Answer ${key}: ${value}`)
     }
 }
+
+*/
+
+// Lecture: Classes
+
+class Person {
+
+    constructor(name, yearOfBirth, job) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+
+    calculateAge() {
+        let age = new Date().getFullYear() - this.yearOfBirth;
+        console.log(age);
+    }
+
+    static greeting() {
+        console.log("Hey there!");
+        
+    }
+}
+
+const frank = new Person("Frank Edward Daza González", 1989, "Systems Engineer");
+Person.greeting();
