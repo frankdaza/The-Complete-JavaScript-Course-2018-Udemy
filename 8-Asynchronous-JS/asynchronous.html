@@ -103,26 +103,45 @@
       //   });
 
 
-      async function getRecipeAW() {
-        const IDs = await getIDs;
-        console.log(IDs);
+      // async function getRecipeAW() {
+      //   const IDs = await getIDs;
+      //   console.log(IDs);
 
-        const recipe = await getRecipe(IDs[2]);
-        console.log(recipe);
+      //   const recipe = await getRecipe(IDs[2]);
+      //   console.log(recipe);
 
-        const related = await getRelated("Frank DAza");
-        console.log(related);
+      //   const related = await getRelated("Frank DAza");
+      //   console.log(related);
 
-        return recipe;
-      }
+      //   return recipe;
+      // }
 
-      // const rec = getRecipeAW();
-      // console.log(rec);
+      // // const rec = getRecipeAW();
+      // // console.log(rec);
 
-      getRecipeAW()
-      .then(result => {
-        console.log(`${result} is the best ever!`);
-      });
+      // getRecipeAW()
+      // .then(result => {
+      //   console.log(`${result} is the best ever!`);
+      // });
+
+
+        function getWeather(weaId) {
+          fetch(`https://www.metaweather.com/api/location/${weaId}/`)
+          .then(result => {
+            return result.json();
+          })
+          .then(data => {
+            // console.log(data);
+            const today = data.consolidated_weather[0];
+            console.log(`Temperatures in ${data.title} stay between ${today.min_temp} and ${today.max_temp}`);
+          })
+          .catch(error => {
+            console.log(`Error ${error}`);
+          })
+        }
+
+        getWeather(2487956);
+        getWeather(44418);
 
 
     </script>
