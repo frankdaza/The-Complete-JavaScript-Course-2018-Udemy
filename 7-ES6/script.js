@@ -195,7 +195,7 @@ function isFullAge6(...years) {
 
 isFullAge6(990, 2000, 1965);
 
-*/
+
 
 // Lecture: Default parameters
 
@@ -208,3 +208,38 @@ const Person = function(firstName, yearOfBirth = 0, lastName, nationality = "Col
 
 let frank = new Person("Frank");
 console.log(frank);
+
+*/
+
+// Lecture: Maps
+
+const question = new Map();
+question.set("question", "What is the official name of the lastest Javascript version?");
+question.set(1, "ES5");
+question.set(2, "ES6");
+question.set(3, "ES2015");
+question.set(4, "ES7");
+question.set("correct", 3);
+question.set(true, "Correct answer!");
+question.set(false, "Wrong, please try again.");
+
+// console.log(question.get("question"));
+// console.log(question.size);
+// console.log(question.delete(4));
+// console.log(question.size);
+// console.log(question.clear());
+// console.log(question.size);
+
+// question.forEach((value, key) =>
+//     console.log(`This is key: ${key}, and it's set to ${value}`)
+// );
+
+// for (const [key, value] of question.entries()) {
+//     console.log(`This is key: ${key}, and it's set to ${value}`)
+// }
+
+for (const [key, value] of question.entries()) {
+    if (typeof(key) === "number") {
+        console.log(`Answer ${key}: ${value}`)
+    }
+}
