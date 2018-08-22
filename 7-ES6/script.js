@@ -158,7 +158,7 @@ var ages = [16, 34, 12, 14, 19, 25];
 console.log(ages.findIndex(e => e >= 18));
 console.log(ages.find(e => e >= 18));
 
-*/
+
 
 // Lecture: The spread operator
 
@@ -182,3 +182,15 @@ const all = [h, ...boxes];
 Array.from(boxes).forEach(box =>
     box.style.color = "purple"
 );
+
+*/
+
+// Lecture: Rest parameters
+
+function isFullAge6(...years) {
+    years.forEach(e => 
+        console.log((2018 - e) >= 18)
+    );
+}
+
+isFullAge6(990, 2000, 1965);
